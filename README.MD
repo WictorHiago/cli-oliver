@@ -55,11 +55,6 @@ npx oliver make:usecase         // create usecase
 npx oliver config:orm           // not working
 ```
 
-<div align="center">
-
-[typescript-image]
-
-</div>
 <br>
 <br>
 <div align="center">
