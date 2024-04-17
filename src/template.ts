@@ -56,7 +56,7 @@ export class Template {
         { path: "infra/repository/repositoryInMemory.ts", content: "" },
       ];
       directories.forEach((directory) => {
-        console.log(`🔹 Create success: ${directory}`);
+        // console.log(`🔹 Create success: ${directory}`);
         const fullDirPath = path.resolve(rootDir, "src", directory);
 
         fs.mkdirSync(fullDirPath, { recursive: true }); // Cria o diretório pai recursivamente
@@ -66,6 +66,21 @@ export class Template {
         const fullFilePath = path.resolve(rootDir, "src", file.path);
         fs.writeFileSync(fullFilePath, file.content);
       });
+      (function end() {
+        const json = fs.readFileSync(path.resolve(rootDir, "package.json"), "utf8");
+        console.log(json);
+        const packageJson = JSON.parse(json);
+        packageJson.scripts = {
+          dev: "ts-node-dev --respawn --transpile-only src/infra/http/express.ts",
+        };
+
+        fs.writeFileSync(path.resolve(rootDir, "package.json"), JSON.stringify(packageJson, null, 2));
+        console.log(`
+          🪬   Install sucess:
+                cd <your-app>
+                npx oliver install
+                `);
+      })();
     }
     if (selectTemplate === "no-template") {
       setTimeout(async () => {

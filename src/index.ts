@@ -73,10 +73,5 @@ export class Operator {
       selectTemplate,
     };
     fs.writeFileSync(path.resolve(__dirname, "AppProps.json"), JSON.stringify(objAppProps, null, 2));
-    console.log(`
-          🪬   Install sucess:
-                cd <your-app>
-                npx oliver install
-                `);
   }
 }

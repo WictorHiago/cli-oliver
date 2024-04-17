@@ -44,7 +44,14 @@ src
 ```
 npx oliver create
 npx oliver install
+cd my-app
+code .
 ```
+
+### Typescript
+
+Configure your project to typescript
+run: tsc -init and edit your choices
 
 ### Commands
 

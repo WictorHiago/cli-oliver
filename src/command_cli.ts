@@ -29,7 +29,7 @@ export async function install() {
   console.log(dependencies);
 
   execSync(`npm i ${dependencies.dependencies}`, { cwd: path.resolve(rootDir), stdio: "inherit" });
-  execSync(`npm i ${dependencies.devDependencies} -D`, { cwd: path.resolve(rootDir), stdio: "inherit" });
+  execSync(`npm i ${dependencies.devDependencies} ts-node-dev -D`, { cwd: path.resolve(rootDir), stdio: "inherit" });
 }
 
 import { Operator } from ".";
