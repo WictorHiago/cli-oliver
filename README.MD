@@ -9,7 +9,8 @@
 - pre-configured packages such as Express.js, Morgan, and Cors.
 ```
 
-#Shots
+# Shots
+<hr>
 <img src="https://github.com/WictorHiago/cli-oliver/blob/main/assets/image2.png" width="45%">
 <hr>
 <img src="https://github.com/WictorHiago/cli-oliver/blob/main/assets/image1.png" width="45%">
