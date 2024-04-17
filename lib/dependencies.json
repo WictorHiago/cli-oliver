@@ -1,0 +1,4 @@
+{
+  "dependencies": "express morgan cors dotenv pg sqlite3",
+  "devDependencies": "@types/express @types/morgan @types/cors"
+}

@@ -1,0 +1,12 @@
+{
+  "nameApp": "api-express",
+  "packages": [
+    "express",
+    "morgan",
+    "cors",
+    "dotenv",
+    "pg",
+    "sqlite3"
+  ],
+  "selectTemplate": "clean-archi"
+}

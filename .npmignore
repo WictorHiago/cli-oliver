@@ -1,0 +1,7 @@
+node_modules
+teste-template
+tsconfig.json
+_app_test_
+tests.ts
+tests.js
+lib
