@@ -57,7 +57,7 @@ npx oliver config:orm           // not working
 
 <div align="center">
 
-[![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+[typescript-image]
 
 </div>
 <br>
@@ -65,3 +65,6 @@ npx oliver config:orm           // not working
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://github.com/WictorHiago/cli-oliver.git">Wictor Hiago</a>
 </div>
+
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[license-url]: LICENSE.md
