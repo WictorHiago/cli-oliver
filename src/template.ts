@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { exec } from "child_process";
+import { exec, execSync } from "child_process";
 
 export class Template {
   public async generate(): Promise<void> {
@@ -10,16 +10,7 @@ export class Template {
     if (!fs.existsSync(path.resolve(rootDir))) {
       await fs.mkdirSync(path.resolve(rootDir), { recursive: true });
     }
-    exec(`npm init -y`, { cwd: path.resolve(rootDir) }, (error, stdout, stderr) => {
-      if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-      }
-      if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-      }
-    });
+    execSync(`npm init -y`, { cwd: path.resolve(rootDir), stdio: "inherit" });
 
     const packagesToInstall = packages.join(" ");
     const dirProject = path.resolve(rootDir);
@@ -56,7 +47,6 @@ export class Template {
         { path: "infra/repository/repositoryInMemory.ts", content: "" },
       ];
       directories.forEach((directory) => {
-        // console.log(`🔹 Create success: ${directory}`);
         const fullDirPath = path.resolve(rootDir, "src", directory);
 
         fs.mkdirSync(fullDirPath, { recursive: true }); // Cria o diretório pai recursivamente

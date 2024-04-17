@@ -1,7 +1,7 @@
 # CLI OLIVER
 
 ```
-- Version: 1.2.8
+- Version: 1.3.3
 - Author: Wictor Hiago
 - Github: https://github.com/WictorHiago/cli-oliver.git
 - Description: CLI OLIVER is a CLI for building RESTful APIs with Node.js.
